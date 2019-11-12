@@ -1,0 +1,179 @@
+﻿Microsoft Windows [Version 10.0.17763.805]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\keshavb>cd ..
+
+C:\Users>cd ..
+
+C:\>pip install virtualenv
+Collecting virtualenv
+  Downloading https://files.pythonhosted.org/packages/c5/97/00dd42a0fc41e9016b23f07ec7f657f636cb672fad9cf72b80f8f65c6a46/virtualenv-16.7.7-py2.py3-none-any.whl (3.4MB)
+     |████████████████████████████████| 3.4MB 3.3MB/s
+Installing collected packages: virtualenv
+Successfully installed virtualenv-16.7.7
+WARNING: You are using pip version 19.2.3, however version 19.3.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+C:\>pip install virtualenvwrapper-win
+Collecting virtualenvwrapper-win
+  Downloading https://files.pythonhosted.org/packages/f5/23/4cba98733b9122219ce67177d745e4984b524b867cf3728eaa807ea21919/virtualenvwrapper-win-1.2.5.tar.gz
+Requirement already satisfied: virtualenv in c:\users\keshavb\appdata\local\programs\python\python37\lib\site-packages (from virtualenvwrapper-win) (16.7.7)
+Installing collected packages: virtualenvwrapper-win
+  Running setup.py install for virtualenvwrapper-win ... done
+Successfully installed virtualenvwrapper-win-1.2.5
+WARNING: You are using pip version 19.2.3, however version 19.3.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+C:\>mkdir try
+
+C:\>dir
+ Volume in drive C is Windows
+ Volume Serial Number is BC35-F19D
+
+ Directory of C:\
+
+09/23/2019  03:05 PM    <DIR>          Dell
+09/23/2019  03:10 PM    <DIR>          drvrtmp
+09/23/2019  03:13 PM    <DIR>          Intel
+10/18/2019  10:25 AM    <DIR>          OLD_InsuranceScraper
+11/08/2019  10:27 AM    <DIR>          ortec-finance
+09/15/2018  08:33 AM    <DIR>          PerfLogs
+11/07/2019  11:58 AM    <DIR>          PolicyTerms
+11/01/2019  11:15 AM    <DIR>          Program Files
+10/08/2019  08:41 AM    <DIR>          Program Files (x86)
+11/01/2019  03:04 PM    <DIR>          Summarizer
+10/18/2019  09:19 AM    <DIR>          Summarizer_OLD
+11/08/2019  11:58 AM    <DIR>          try
+09/24/2019  09:46 AM    <DIR>          Users
+10/28/2019  10:20 AM    <DIR>          Windows
+               0 File(s)              0 bytes
+              14 Dir(s)  184,268,152,832 bytes free
+
+C:\>cd try
+
+C:\try>mkvirtualenv HelloWorld
+ C:\Users\keshavb\Envs is not a directory, creating
+Using base prefix 'c:\\users\\keshavb\\appdata\\local\\programs\\python\\python37'
+New python executable in C:\Users\keshavb\Envs\HelloWorld\Scripts\python.exe
+Installing setuptools, pip, wheel...
+done.
+
+(HelloWorld) C:\try>cd dev
+The system cannot find the path specified.
+
+(HelloWorld) C:\try>mkdir dev
+
+(HelloWorld) C:\try>cd dev
+
+(HelloWorld) C:\try\dev>mkdir HelloWorld
+
+(HelloWorld) C:\try\dev>cd HelloWorld
+
+(HelloWorld) C:\try\dev\HelloWorld>setprojectdir .
+
+    "C:\try\dev\HelloWorld" is now the project directory for
+    virtualenv "C:\Users\keshavb\Envs\HelloWorld"
+
+    "C:\try\dev\HelloWorld" added to
+    C:\Users\keshavb\Envs\HelloWorld\Lib\site-packages\virtualenv_path_extensions.pth
+
+(HelloWorld) C:\try\dev\HelloWorld>deactivate
+
+C:\try\dev\HelloWorld>workon HelloWorld
+(HelloWorld) C:\try\dev\HelloWorld>pip install Flask
+Collecting Flask
+  Downloading https://files.pythonhosted.org/packages/9b/93/628509b8d5dc749656a9641f4caf13540e2cdec85276964ff8f43bbb1d3b/Flask-1.1.1-py2.py3-none-any.whl (94kB)
+     |████████████████████████████████| 102kB 6.8MB/s
+Collecting click>=5.1
+  Using cached https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl
+Collecting itsdangerous>=0.24
+  Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
+Collecting Werkzeug>=0.15
+  Downloading https://files.pythonhosted.org/packages/ce/42/3aeda98f96e85fd26180534d36570e4d18108d62ae36f87694b476b83d6f/Werkzeug-0.16.0-py2.py3-none-any.whl (327kB)
+     |████████████████████████████████| 327kB 6.4MB/s
+Collecting Jinja2>=2.10.1
+  Downloading https://files.pythonhosted.org/packages/65/e0/eb35e762802015cab1ccee04e8a277b03f1d8e53da3ec3106882ec42558b/Jinja2-2.10.3-py2.py3-none-any.whl (125kB)
+     |████████████████████████████████| 133kB 6.8MB/s
+Collecting MarkupSafe>=0.23
+  Using cached https://files.pythonhosted.org/packages/65/c6/2399700d236d1dd681af8aebff1725558cddfd6e43d7a5184a675f4711f5/MarkupSafe-1.1.1-cp37-cp37m-win_amd64.whl
+Installing collected packages: click, itsdangerous, Werkzeug, MarkupSafe, Jinja2, Flask
+Successfully installed Flask-1.1.1 Jinja2-2.10.3 MarkupSafe-1.1.1 Werkzeug-0.16.0 click-7.0 itsdangerous-1.1.0
+
+(HelloWorld) C:\try\dev\HelloWorld>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+(HelloWorld) C:\try\dev\HelloWorld>dir
+ Volume in drive C is Windows
+ Volume Serial Number is BC35-F19D
+
+ Directory of C:\try\dev\HelloWorld
+
+11/08/2019  12:01 PM    <DIR>          .
+11/08/2019  12:01 PM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  183,541,252,096 bytes free
+
+(HelloWorld) C:\try\dev\HelloWorld>type nul > helloworld.py
+
+(HelloWorld) C:\try\dev\HelloWorld>dir
+ Volume in drive C is Windows
+ Volume Serial Number is BC35-F19D
+
+ Directory of C:\try\dev\HelloWorld
+
+11/08/2019  03:10 PM    <DIR>          .
+11/08/2019  03:10 PM    <DIR>          ..
+11/08/2019  03:10 PM                 0 helloworld.py
+               1 File(s)              0 bytes
+               2 Dir(s)  183,543,910,400 bytes free
+
+(HelloWorld) C:\try\dev\HelloWorld>python helloworld.py
+ * Serving Flask app "helloworld" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [08/Nov/2019 15:21:12] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [08/Nov/2019 15:21:16] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [08/Nov/2019 15:21:45] "GET /index HTTP/1.1" 200 -
+
+(HelloWorld) C:\try\dev\HelloWorld>oy
+'oy' is not recognized as an internal or external command,
+operable program or batch file.
+
+(HelloWorld) C:\try\dev\HelloWorld>py
+Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 20:34:20) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from helloworld import app
+>>> app.url_map
+Map([<Rule '/index' (GET, OPTIONS, HEAD) -> index>,
+ <Rule '/static/<filename>' (GET, OPTIONS, HEAD) -> static>])
+>>>
+KeyboardInterrupt
+>>> exit
+Use exit() or Ctrl-Z plus Return to exit
+>>> exit()
+
+##############Thermos###############
+(thermos) C:\learnFlask\dev\thermos\thermos>py thermos.py
+ * Serving Flask app "thermos" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 679-106-309
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [12/Nov/2019 16:02:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2019 16:02:06] "GET /js/main.js HTTP/1.1" 404 -
+127.0.0.1 - - [12/Nov/2019 16:02:06] "GET /static/css/normalize.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2019 16:02:06] "GET /static/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2019 16:02:06] "GET /static/css/main.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2019 16:02:09] "GET /add HTTP/1.1" 200 -
+
+Ctrl + C
+
+(thermos) C:\learnFlask\dev\thermos\thermos>deactivate thermos
