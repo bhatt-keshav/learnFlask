@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Add a new bookmark</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}
+Thermos -- Add a url
+{% endblock %}
+
+{% block content %} 
+    <section>
+        <h1>Add a new URL</h1>
+    </section>
     <form action="" method="post">
         <p>Please add your bookmark here:
             <input type="text" name="url">
@@ -12,6 +15,8 @@
         <p>
             <button type="submit">Submit</button>
         </p>
-    </form>
-</body>
-</html>
+    <!-- </form> -->
+{% endblock %}
+
+{% block sidebar%}
+{% endblock %}
