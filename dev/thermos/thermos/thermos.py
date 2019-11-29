@@ -5,7 +5,7 @@ from flask import Flask, render_template, url_for, request, redirect, url_for
 
 from logging import DEBUG
 
-# appliation instance, used globally
+# just creates an appliation instance, used globally
 app = Flask(__name__)
 app.logger.setLevel(DEBUG)
 
@@ -17,6 +17,7 @@ def store_bookmark(url):
         user = 'keshav',
         datetime = datetime.utcnow()
     ))
+
 # the index view is hosted at both the root URL and /index URL 
 @app.route('/')
 @app.route('/index')
@@ -34,6 +35,7 @@ def add():
         # this url variable is present in the add.html file at: <input type="text" name="url">
         url = request.form['url']
         store_bookmark(url)
+        # logger
         app.logger.debug('stored url: ' + url)
         return redirect(url_for('index'))
     # render temp will look in the templates folder for the file add.html    
@@ -48,5 +50,6 @@ def page_not_found(e):
 def server_error(e):
     return render_template('500.html'), 500      
 
+# this does nothing much, just boiler plate to start the flask service
 if __name__ == '__main__':
     app.run(debug=True)    
