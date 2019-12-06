@@ -1,15 +1,20 @@
 from datetime import datetime
-from flask import Flask, render_template, url_for, request, redirect, url_for
+from flask import Flask, render_template, url_for, request, redirect, url_for, flash
+# redirect library is used to redirect user to another page
 
-# redirect is used to redirect user to another page
-
-from logging import DEBUG
+# from logging import DEBUG ## Commented out since using flash()
 
 # just creates an appliation instance, used globally
 app = Flask(__name__)
-app.logger.setLevel(DEBUG)
+## app.logger.setLevel(DEBUG) # commented out since app is no longer in debug mode
+
+## Generating a secret key for flash()
+# import os
+# os.urandom(24) # key = '\xb5\x1e#\x15\x07\x9a\xc8XB\xa8\x95\x10B\xbf\x9auuh0\x81ML\xe2 '
 
 bookmarks = []
+app.config['SECRET_KEY'] = b'_5#y2L"F4Q8z\n\xec]/'
+
 
 def store_bookmark(url):
     bookmarks.append(dict(
@@ -35,8 +40,9 @@ def add():
         # this url variable is present in the add.html file at: <input type="text" name="url">
         url = request.form['url']
         store_bookmark(url)
-        # logger
-        app.logger.debug('stored url: ' + url)
+        # Logger Commented out since using flash()
+        # app.logger.debug('stored url: ' + url) 
+        flash("Stored bookmark '{}'".format(url))
         return redirect(url_for('index'))
     # render temp will look in the templates folder for the file add.html    
     return render_template('add.html')  

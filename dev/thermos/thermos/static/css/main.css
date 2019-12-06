@@ -154,19 +154,26 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+#hello {
+    margin-top: 20px;
+}
 
+.flashes {
 
+}
 
+.flashes ul{
+    margin: 0 0;
+    background: #FFD6A3;
+    color: #000;
 
+    list-style-type: none;
+    list-style: none;
+}
 
-
-
-
-
-
-
-
-
+article.flashes {
+    margin-bottom: 1em;
+}
 
 /* ==========================================================================
    Media Queries
