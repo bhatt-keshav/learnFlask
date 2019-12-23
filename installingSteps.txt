@@ -177,3 +177,10 @@ Use exit() or Ctrl-Z plus Return to exit
 Ctrl + C
 
 (thermos) C:\learnFlask\dev\thermos\thermos>deactivate thermos
+
+######Generating a secret key
+py
+>>> import os
+>>> os.urandom(24)
+b'\xb5\x1e#\x15\x07\x9a\xc8XB\xa8\x95\x10B\xbf\x9auuh0\x81ML\xe2 '
+>>>
