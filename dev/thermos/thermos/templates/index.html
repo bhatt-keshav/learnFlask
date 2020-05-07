@@ -16,7 +16,8 @@ Thermos -- Welcome
             {% if new_bookmarks %}
                 <ul>
                     {% for bm in new_bookmarks %}
-                        <li>{{ bm.user }} added <a href="{{ bm.url }}"></a></li>
+                        <!-- <li>{{ bm.user }} added <a href="{{ bm.url }}"></a></li> -->
+                        <li>{{ bm.user }} added {{ (bm.url) }}></li>
                     {% endfor %}    
                 </ul>
                 {% else %}

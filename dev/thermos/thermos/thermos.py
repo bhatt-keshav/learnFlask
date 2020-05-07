@@ -19,9 +19,10 @@ app = Flask(__name__)
 bookmarks = []
 app.config['SECRET_KEY'] = b'_5#y2L"F4Q8z\n\xec]/'
 
-def store_bookmark(url):
+def store_bookmark(url, description):
     bookmarks.append(dict(
         url = url,
+        description = description,
         user = 'keshav',
         datetime = datetime.utcnow()
     ))
@@ -29,7 +30,6 @@ def store_bookmark(url):
 # Returns last bookmarks sorted by date
 def new_bookmarks(num):
     return sorted(bookmarks, key=lambda bm: bm['datetime'], reverse=True)[:num]
-
 
 # The index view is hosted at both the root URL and /index URL 
 @app.route('/')
@@ -56,8 +56,10 @@ def add():
         url =  form.url.data
         description = form.description.data
         store_bookmark(url, description)
+        # see string formatting at https://www.geeksforgeeks.org/python-format-function/
         flash("Stored '{}'".format(description))
         return redirect(url_for('index'))
+
 ####   Below commented as using form.validate.. ####
     # if request.method == "POST":
     #     # this url variable is present in the add.html file at: <input type="text" name="url">
@@ -69,6 +71,7 @@ def add():
     #     return redirect(url_for('index'))
     # # render temp will look in the templates folder for the file add.html    
 ####    # Block commented as using form.validate.. ####    
+    
     return render_template('add.html', form=form)  
 
 @app.errorhandler(404)
