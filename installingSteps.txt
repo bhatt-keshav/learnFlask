@@ -139,10 +139,6 @@ operable program or batch file.
 127.0.0.1 - - [08/Nov/2019 15:21:16] "GET / HTTP/1.1" 404 -
 127.0.0.1 - - [08/Nov/2019 15:21:45] "GET /index HTTP/1.1" 200 -
 
-(HelloWorld) C:\try\dev\HelloWorld>oy
-'oy' is not recognized as an internal or external command,
-operable program or batch file.
-
 (HelloWorld) C:\try\dev\HelloWorld>py
 Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 20:34:20) [MSC v.1916 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
@@ -157,6 +153,7 @@ Use exit() or Ctrl-Z plus Return to exit
 >>> exit()
 
 ##############Thermos###############
+> workon thermos
 (thermos) C:\learnFlask\dev\thermos\thermos>py thermos.py
  * Serving Flask app "thermos" (lazy loading)
  * Environment: production
@@ -177,7 +174,7 @@ Use exit() or Ctrl-Z plus Return to exit
 Ctrl + C
 
 (thermos) C:\learnFlask\dev\thermos\thermos>deactivate thermos
-
+	
 ######Generating a secret key
 py
 >>> import os
